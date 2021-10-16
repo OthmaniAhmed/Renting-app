@@ -1,0 +1,46 @@
+#second-page{
+    background-color: #F2F4F8;
+    height: 800px;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.img-container img{
+    margin-left: 20%;
+    width: 800px;
+    height: 100%;
+}
+
+.info-container{
+    margin-right: 20%;
+    margin-top: 200px;
+    width: 500px;
+}
+
+.info-container h1{
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    margin-bottom: 50px;
+    font-size: 40px;
+}
+
+.info-container p{
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+
+.Add-btn{
+    margin-right: 50px;
+    border: none;
+    width: fit-content;
+    border-radius: 30px;
+    padding: 15px 50px;
+    font-size: x-large;
+    cursor: pointer;
+    margin-bottom: 20px;
+    background-color: #407BFF ;
+    color: #FFFF ;
+}
