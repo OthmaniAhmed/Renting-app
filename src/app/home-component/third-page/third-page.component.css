@@ -1,0 +1,53 @@
+#third-page{
+    background-image: url("../../../assets/ThirdPageBackground.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 900px;
+}
+
+h1{
+    font-size: 50px;
+    font-family:Helvetica, Arial, sans-serif;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.screach-container{
+    display: flex;
+    justify-content: center;
+}
+
+.screach-input{
+    width: 50%;
+    height: 60px;
+    margin-top: 60px;
+    border: 1px solid #fff;
+    border-radius: 10px 0px 0px 10px;
+    font-size:18px;
+    padding-left: 25px;
+}
+
+.screach-btn{
+    background-color: #776DEB;
+    width: 150px;
+    height: 60px;
+    margin-top: 60px;
+    border: 1px solid #fff;
+    border-radius:0px 10px 10px 0px;
+    cursor: pointer;
+    color: #FFFF;
+    font-size: x-large;
+}
+
+img{
+    width: 600px;
+    display: block;
+    margin: 0 auto;
+}
+
+::placeholder {
+    color: rgb(149, 149, 156);
+    font-weight: 400;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 18px;
+  }

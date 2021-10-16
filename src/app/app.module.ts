@@ -7,6 +7,7 @@ import { HomeComponentComponent } from './home-component/home-component.componen
 import { FirstPageComponent } from './home-component/first-page/first-page.component';
 import { NavBarComponent } from './home-component/nav-bar/nav-bar.component';
 import { SecondPageComponent } from './home-component/second-page/second-page.component';
+import { ThirdPageComponent } from './home-component/third-page/third-page.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +15,13 @@ import { SecondPageComponent } from './home-component/second-page/second-page.co
     HomeComponentComponent,
     FirstPageComponent,
     NavBarComponent,
-    SecondPageComponent
+    SecondPageComponent,
+    ThirdPageComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

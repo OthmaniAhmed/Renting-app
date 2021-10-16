@@ -5,7 +5,7 @@
     flex-flow: row;
     width: 100%;
     padding: 5px 20px;
-    transition: 0.8s;
+    transition: 0.5s;
     z-index: 10;
     overflow-y: hidden;
 }
