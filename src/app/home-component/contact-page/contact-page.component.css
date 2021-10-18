@@ -1,0 +1,114 @@
+#fourth-page{
+    background-image: url("../../../assets/ContactPageBackground.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 700px;
+}
+
+.container{
+    display: flex;
+}
+
+.submit-container{
+    height: 500px;
+    width:  450px;
+    margin-left: 10%;
+    margin-top: 70px;
+    background-color: #FFFF;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.submit-container h1{
+    margin-bottom: 10%;
+    margin-left: 35%;
+    padding-top: 20px;
+    font-family: Montserrat, sans-serif;;
+}
+
+.submit-container input{
+    width: 80%;
+    height: 50px;
+    margin-bottom: 5%;
+    margin-left: 5%;
+    background-color: #e0e9fa;
+    border: 1px #e0e9fa;
+    border-radius: 25px;
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+.submit-container textarea{
+    background-color: #e0e9fa;
+    border: 1px #e0e9fa;
+    border-radius: 25px;
+    margin-left: 5%;
+    width: 80%;
+    padding-left: 20px;
+    padding-top: 5px;
+    font-size: 20px;
+}
+
+.submit-btn{
+    width: fit-content;
+    margin-top: 5%;
+    margin-left: 40%;
+    background-color: #A751BD;
+    border: 1px #A751BD;
+    color: #FFFF;
+    font-size: 20px;
+    padding: 10px 30px ;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.submit-btn:hover{
+    background-color: #FFFF;
+    color: #A751BD;
+    border: 2px #A751BD solid;
+
+}
+
+.info-container{
+    margin-left: 10%;
+    margin-top: 70px;
+    width: 550px;
+}
+
+.info-container h1{
+    font-family: Montserrat, sans-serif;
+    padding-bottom: 20px;
+    font-size: 30px;
+}
+
+.info-container p{
+    padding-bottom: 20px;
+    font-size: 20px;
+}
+
+.info-container .info-ico{
+    display: flex;
+    font-family: microsoft yahei;
+    font-size: 15px;
+}
+
+.info-container .info-ico span{
+    margin-right: 10px;
+    margin-bottom: 15px;
+    color: #776DEB;
+    font-size: 1.7rem;
+}
+
+.social-media-container{
+    position: fixed;
+    left: 50%;
+    bottom: 20px;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+}
+
+.social-media-container a{
+    color: #FFFF;
+    margin-right: 20px;
+    font-size: 1.7rem;
+    cursor: pointer;
+}

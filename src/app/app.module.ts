@@ -8,6 +8,7 @@ import { FirstPageComponent } from './home-component/first-page/first-page.compo
 import { NavBarComponent } from './home-component/nav-bar/nav-bar.component';
 import { SecondPageComponent } from './home-component/second-page/second-page.component';
 import { ThirdPageComponent } from './home-component/third-page/third-page.component';
+import { ContactPageComponent } from './home-component/contact-page/contact-page.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ThirdPageComponent } from './home-component/third-page/third-page.compo
     FirstPageComponent,
     NavBarComponent,
     SecondPageComponent,
-    ThirdPageComponent
+    ThirdPageComponent,
+    ContactPageComponent
   ],
   imports: [
     BrowserModule,

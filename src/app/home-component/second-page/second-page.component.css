@@ -38,9 +38,11 @@
     width: fit-content;
     border-radius: 30px;
     padding: 15px 50px;
-    font-size: x-large;
+    font-size: 20px;
     cursor: pointer;
     margin-bottom: 20px;
     background-color: #407BFF ;
     color: #FFFF ;
+    font-family: Arial;
+    font-weight: 600;
 }
