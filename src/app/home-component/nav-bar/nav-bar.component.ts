@@ -14,6 +14,10 @@ export class NavBarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  scrollTo(tag : string){
+    document.getElementById(tag)?.scrollIntoView();
+  }
+
   @HostListener("document:scroll")
   scrollfunction(){
     if(document.body.scrollTop > 30 || document.documentElement.scrollTop > 30){
