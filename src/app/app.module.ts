@@ -9,6 +9,8 @@ import { NavBarComponent } from './home-component/nav-bar/nav-bar.component';
 import { SecondPageComponent } from './home-component/second-page/second-page.component';
 import { ThirdPageComponent } from './home-component/third-page/third-page.component';
 import { ContactPageComponent } from './home-component/contact-page/contact-page.component';
+import { LoginComponentComponent } from './auth/login-component/login-component.component';
+import { SignupComponentComponent } from './auth/signup-component/signup-component.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { ContactPageComponent } from './home-component/contact-page/contact-page
     NavBarComponent,
     SecondPageComponent,
     ThirdPageComponent,
-    ContactPageComponent
+    ContactPageComponent,
+    LoginComponentComponent,
+    SignupComponentComponent
   ],
   imports: [
     BrowserModule,
