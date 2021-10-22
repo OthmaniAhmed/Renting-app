@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300&family=Roboto:wght@100&display=swap');
 
 #login-page{
-    height: 100vh;
+    height: 1000px;
     overflow-y: hidden;
-
+    background-image: url("../../../assets/SignInBackground.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .container{
@@ -42,11 +44,12 @@
     margin-left: -75px;
     margin-bottom: 50px;
     font-family: Roboto, sans-serif;
+    color: #455a64;
     
 }
   
 .social-media-container a{
-    color: #123379;
+    color: #455a64;
     margin-left: 30px;
     font-size: 1.7rem;
     cursor: pointer;
@@ -60,6 +63,7 @@
     height: 700px;
     text-align: center;
     font-family: 'Roboto', sans-serif;
+    background-color: #FFFF;
 }
 
 .login-card{
@@ -105,4 +109,8 @@
     border-radius: 30px;
     font-size: large;
     cursor: pointer;
+}
+
+.login-form-container a{
+    color: #407BFF;
 }
