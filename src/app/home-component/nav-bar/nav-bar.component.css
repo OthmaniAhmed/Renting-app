@@ -4,7 +4,6 @@
     left: 0;
     flex-flow: row;
     width: 100%;
-    padding: 5px 20px;
     transition: 0.5s;
     z-index: 10;
     overflow-y: hidden;
@@ -47,7 +46,6 @@
  
  .sticky-navbar{
     position: fixed;
-    padding: 5px 20px;
     background-color: #F2F4F8;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
     

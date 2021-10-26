@@ -11,6 +11,9 @@ import { ThirdPageComponent } from './home-component/third-page/third-page.compo
 import { ContactPageComponent } from './home-component/contact-page/contact-page.component';
 import { LoginComponentComponent } from './auth/login-component/login-component.component';
 import { SignupComponentComponent } from './auth/signup-component/signup-component.component';
+import { AdsPageComponent } from './ads/ads-page/ads-page.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { ApplyPageComponent } from './ads/apply-page/apply-page.component';
 
 @NgModule({
   declarations: [
@@ -22,11 +25,14 @@ import { SignupComponentComponent } from './auth/signup-component/signup-compone
     ThirdPageComponent,
     ContactPageComponent,
     LoginComponentComponent,
-    SignupComponentComponent
+    SignupComponentComponent,
+    AdsPageComponent,
+    ApplyPageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    NoopAnimationsModule,
 
   ],
   providers: [],
