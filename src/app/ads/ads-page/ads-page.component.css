@@ -1,4 +1,114 @@
 #ads-page{
     height: fit-content;
-    background-color: E8F1F8;
+    background-color:  #365BA3;
+}
+
+.return-btn{
+    background-color: #8262B5;
+    padding: 10px 20px;
+    border: none;
+    margin: 20px;
+    margin-left: 80%;
+    border-radius: 30px;
+    color: #FFFF;
+    font-size: large;
+    width: fit-content;
+    cursor: pointer;
+
+}
+
+.filter-container{
+    width: 80%;
+    height: 80px;
+    background-color: #FFFF;
+    margin: 0 auto;   
+    border-radius: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.ads-container{
+    width: 70%;
+    height: 1200px;
+    background-color:  #E8F1F8;
+    margin: 0 auto;  
+    margin-top: 50px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;}
+
+.one-ad-container{
+    height: 280px;
+    background-color: #FFFF;
+    margin-bottom: 100px;
+    width: 90%;
+    margin-left: 10%;
+    border-radius:  30px 0px  0px 30px ;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    display: flex;
+    justify-content:space-between;
+
+}
+
+.hidden-item{
+    color: transparent;
+}
+
+.one-ad-container img{
+    margin-top: 50px;
+    margin-left: 50px;
+    height: 200px;
+    width: 200px;
+    
+}
+
+.one-ad-container .see-more-brn{
+    height: 50px;
+    background-color: #8262B5;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px 0px 0px 30px;
+    color: #FFFF;
+    font-size: large;
+    width: fit-content;
+    cursor: pointer;
+    margin-top: 10%;
+    
+}
+
+.one-ad-container .info-container{
+    width: 45%;
+    margin: 5%;
+}
+
+.one-ad-container .info-container h4{
+    margin-left: 50%;
+    margin-bottom: 10px;
+    margin-top: 50px;
+}
+
+.one-ad-container .info-container h2{
+    color: #26bac9;
+    word-spacing: 5px;
+    font-size: 25px;
+    font-family: "Open Sans", sans-serif;
+    margin-bottom: 10px;
+}
+
+.one-ad-container .info-container h3{
+    font-weight: 500;
+    margin-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.one-ad-container .info-container p {
+    word-break: break-word;
+    overflow: hidden;
+    display: -webkit-box;
+    line-height: 20px; /* fallback */
+    max-height: 40px; /* fallback */
+    -webkit-line-clamp: 2; /* number of lines to show */
+    -webkit-box-orient: vertical;
+    
+
 }

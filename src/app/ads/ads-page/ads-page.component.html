@@ -1,3 +1,21 @@
 <section id="ads-page" >
-  
+  <button class="return-btn" routerLink=""><i class="fas fa-arrow-left"></i> Return</button>
+  <div class="filter-container">
+
+  </div>
+  <div class="ads-container">
+    <h3 class="hidden-item">1</h3>
+    <div class="one-ad-container" *ngFor="let ad of ads">
+        <img src={{ad.picture}} alt="">
+        <div class="info-container">
+            <h2>{{ad.adress}}, {{ad.ville}}</h2>
+            <h3>House for rent, {{ad.roomNumber}} bedrooms</h3>
+            <p>{{ad.description}}</p>
+            <h4>{{ad.prix}}dt/ per {{ad.prixBy}}</h4>
+
+        </div>
+        <button class="see-more-brn">See more ...</button>
+    </div>
+  </div>
+  <h3 class="hidden-item">1</h3>
 </section>
