@@ -4,6 +4,9 @@
 
   </div>
   <div class="ads-container">
+    <div *ngIf="ads.length == 0">
+      <h1>No Ads yet ! Come Back Later</h1>
+    </div>
     <h3 class="hidden-item">1</h3>
     <div class="one-ad-container" *ngFor="let ad of ads">
         <img src={{ad.picture}} alt="">
