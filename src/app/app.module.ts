@@ -14,6 +14,7 @@ import { SignupComponentComponent } from './auth/signup-component/signup-compone
 import { AdsPageComponent } from './ads/ads-page/ads-page.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { ApplyPageComponent } from './ads/apply-page/apply-page.component';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { ApplyPageComponent } from './ads/apply-page/apply-page.component';
     BrowserModule,
     AppRoutingModule,
     NoopAnimationsModule,
+    HttpClientModule,
 
   ],
   providers: [],

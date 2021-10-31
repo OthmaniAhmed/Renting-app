@@ -16,8 +16,12 @@
 
 .col-1-container{
     background-color: #E8F1F8;
-    width: 600px;
+    width: 500px;
     height:100%;
+}
+
+.col-1-container img{
+    margin-top: 50px;
 }
 
 .return-btn{
@@ -35,7 +39,7 @@
 }
 
 .social-media-container{
-    margin-left: 210px;
+    margin-left: 33%;
     position: static;
     margin-top: 50px;
 }
