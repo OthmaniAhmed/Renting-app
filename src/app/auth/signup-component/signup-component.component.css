@@ -35,7 +35,13 @@
     margin: 0 auto;
     cursor: pointer;
     font-size: large;
-
+    transition: 1s;
+}
+.return-btn:hover{
+    background-color: #407BFF;
+    border: 1px solid #407BFF;
+    color: white;
+    transition: 1s;
 }
 
 .social-media-container{

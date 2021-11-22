@@ -14,9 +14,11 @@
             <div class="login-card">
                 <h1>Login</h1>
                 <h2>Welcome to Rent.tn</h2>
-                <input type="email" name="" id="" placeholder="Email"><br>
-                <input type="password" name="" id="" placeholder="Password"><br>
-                <button class="login-btn">Login</button>
+                <form nativeValidater #form>
+                    <input [(ngModel)]="loginUserData.email" type="email" name="email" placeholder="Email"><br>
+                    <input [(ngModel)]="loginUserData.password" type="password" name="password" placeholder="Password"><br>
+                    <button class="login-btn" (click)="form.checkValidity()? loginUser() : null">Login</button>
+                </form>
             </div>
             <h3>New to Rent.tn? <a routerLink='/sign'>Join now !</a></h3>
         </div>
