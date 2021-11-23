@@ -10,15 +10,14 @@ export class LoginComponentComponent implements OnInit {
 
   loginUserData = {email : '', password: ""}
 
-  constructor(private _auth:AuthService) { }
+
+  constructor(private _auth:AuthService,) { }
 
   ngOnInit(): void {
   }
 
   loginUser(){
     this._auth.loginUser(this.loginUserData)
-      .subscribe(
-        res => (console.log(res))
-      )
   }
+
 }
