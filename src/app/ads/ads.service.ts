@@ -15,4 +15,6 @@ export class AdsService {
   getAds():Observable<Advertisement[]>{
     return this.http.get<Advertisement[]>(this.url);
   }
+
+  
 }
