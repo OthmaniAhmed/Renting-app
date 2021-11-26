@@ -1,0 +1,48 @@
+#one-page-ad{
+    background-image: url("../../../assets/ApplyBackground.svg");
+    background-size: cover;
+    background-repeat: no-repeats;
+    height: 1300px;
+}
+
+#hidden-h1{
+    opacity: 0;
+}
+
+.form-container{
+    margin: 0 auto;
+    width: 45%;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-top: 50px;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.apply-btn{
+    margin-left: 45%;
+    padding: 10px 20px;
+    color: #FFFF;
+    background-color: #365BA3;
+    border: #365BA3 solid 1px;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+.form-container h1{
+    background-color: #365BA3;
+    color: #FFFF;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+.form-container h3{
+    margin-top: 15px;
+}
+
+.form-container h4{
+    color: rgb(100, 100, 100);
+}

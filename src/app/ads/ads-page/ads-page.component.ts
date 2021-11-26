@@ -10,8 +10,6 @@ export class AdsPageComponent implements OnInit {
 
   public ads : any = [] ;
   
-//  public hi = [{adress : "hi"},{adress:"ahmed"}]
-
   constructor(private adsService : AdsService) { }
 
   ngOnInit(): void {

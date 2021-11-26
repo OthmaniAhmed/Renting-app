@@ -16,5 +16,9 @@ export class AdsService {
     return this.http.get<Advertisement[]>(this.url);
   }
 
-  
+  getAdById(id: any):Observable<Advertisement>{
+    
+    return this.http.get<Advertisement>(this.url+`${id}`);
+
+  }
 }

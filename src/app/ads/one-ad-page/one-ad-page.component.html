@@ -1,0 +1,24 @@
+<div id="one-page-ad" *ngIf="singleAd">
+    <h1 id="hidden-h1">Rental Application</h1>
+    <div class="form-container">
+        <h1>Landlord Information</h1>
+        <h3>Name</h3>
+        <h4>{{ singleAd.phoneNumber }}</h4>
+        <h3>Phone Number </h3>
+        <h4>{{ singleAd.phoneNumber }}</h4>
+        <h3>Email</h3>
+        <h4>{{ singleAd.phoneNumber }}</h4>
+    </div>
+    <div class="form-container">
+        <h1>Rental Information</h1>
+        <h3>House Rental Address</h3>
+        <h4>{{ singleAd.adress }} / {{ singleAd.ville }}</h4>
+        <h3>Rent Amoount per {{ singleAd.prixBy }}</h3>  
+        <h4>{{ singleAd.prix }} dt</h4> 
+        <h3>Number of Rooms</h3>
+        <h4>{{ singleAd.roomNumber }}</h4>
+        <h3>Description</h3>
+        <h4>{{ singleAd.description }}</h4>
+        <button class="apply-btn" [routerLink]="['/apply']">Apply</button>
+    </div>
+</div>

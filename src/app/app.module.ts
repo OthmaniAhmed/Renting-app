@@ -15,7 +15,8 @@ import { SignupComponentComponent } from './auth/signup-component/signup-compone
 import { AdsPageComponent } from './ads/ads-page/ads-page.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { ApplyPageComponent } from './ads/apply-page/apply-page.component';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { OneAdPageComponent } from './ads/one-ad-page/one-ad-page.component'
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { HttpClientModule } from '@angular/common/http'
     LoginComponentComponent,
     SignupComponentComponent,
     AdsPageComponent,
-    ApplyPageComponent
+    ApplyPageComponent,
+    OneAdPageComponent
   ],
   imports: [
     BrowserModule,
