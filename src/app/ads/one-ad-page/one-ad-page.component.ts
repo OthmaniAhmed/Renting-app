@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { AuthService } from 'src/app/auth/auth.service';
 import { AdsService } from '../ads.service';
 import { Advertisement } from '../Advertisement';
 
@@ -12,10 +13,13 @@ import { Advertisement } from '../Advertisement';
 export class OneAdPageComponent implements OnInit {
 
   public singleAd?: any ;
-  private _id : string | undefined ;
+  public userDetails? : any;
+  private _id! : string ;
   private routeSub!: Subscription;
 
-  constructor(private adsService : AdsService, private route : ActivatedRoute) { }
+  private userId = "619ab530d4a23538393eaef7" ;
+
+  constructor(private adsService : AdsService, private route : ActivatedRoute,private userService : AuthService,private router :Router) { }
 
   ngOnInit(): void {
     this.routeSub = this.route.params.subscribe(params => {
@@ -24,11 +28,19 @@ export class OneAdPageComponent implements OnInit {
 
     this.adsService.getAdById(this._id).subscribe(
       data => {
-        this.singleAd = data 
+        this.singleAd = data ;
+        this.userId = this.singleAd.creatorId ;
+        this.userService.getUserById(this.userId).subscribe(
+          data =>{
+            this.userDetails = data ;
+          }
+        )
       }
     );
+  }
 
-
+  applyRedirection(){
+    this.router.navigate(["apply",this._id])
   }
 
 

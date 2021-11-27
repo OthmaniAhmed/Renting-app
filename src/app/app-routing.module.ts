@@ -12,7 +12,7 @@ const routes: Routes = [
   {path: 'login', component: LoginComponentComponent},
   {path: 'sign', component: SignupComponentComponent},
   {path: 'ads', component: AdsPageComponent},
-  {path: 'apply', component: ApplyPageComponent},
+  {path: 'apply/:id', component: ApplyPageComponent},
   {path: 'offer/:id', component: OneAdPageComponent},  
 
 ];

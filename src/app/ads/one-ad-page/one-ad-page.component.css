@@ -5,8 +5,26 @@
     height: 1300px;
 }
 
-#hidden-h1{
-    opacity: 0;
+.return-section h1{
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #FFFF;
+    margin-left: 50px;
+    padding-top: 10px;
+    word-spacing: 5px;
+    font-size: 30px;
+}
+
+.return-section h3{
+    font-family: CentraNo2-Medium, sans-serif;;
+    color: #FFFF;
+    margin-left: 70px;
+    padding-top: 10px;
+    word-spacing: 3px;
+    font-size: 15px;
+}
+
+.return-section a{
+    color: #a3ceee;
 }
 
 .form-container{
@@ -44,5 +62,13 @@
 }
 
 .form-container h4{
+    margin-top: 2px;
     color: rgb(100, 100, 100);
 }
+
+.ad-img{
+    margin: 30px 30%;
+    height: 350px;
+    width: 350px;
+}
+

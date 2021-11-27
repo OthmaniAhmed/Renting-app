@@ -9,6 +9,7 @@ export class AuthService {
 
   private _registerUrl = "http://localhost:3000/api/auth/register" ;
   private _loginUrl = "http://localhost:3000/api/auth/" ;
+  private _userInfoUrl = "http://localhost:3000/api/auth/userinfo" ;
 
   private isAuthenticated = false ;
   private userName: string | undefined;
@@ -19,6 +20,10 @@ export class AuthService {
     return  this.http.post<any>(this._registerUrl, user )
   }
 
+  getUserById(id : string){
+    return this.http.get<any>(this._userInfoUrl + `/${id}`)
+  }
+
   loginUser(user : any){
     return this.http.post<any>(this._loginUrl,user).subscribe(
       res => {
@@ -26,22 +31,22 @@ export class AuthService {
         localStorage.setItem('token',res.token);
         localStorage.setItem('username',res.userName);
         this.userName = res.userName ;
-        
-        console.log(this.userName+"55"+this.isAuthenticated)
         this.router.navigate(['']);
       }
     )
   }
+
+
   getisAuth(){
-        return this.isAuthenticated;
+      return this.isAuthenticated;
 }
 
   getUserName(){
-  return this.userName;
+      return this.userName;
 }
 
-logout(){
-  localStorage.clear();
+  logout(){
+      localStorage.clear();
 }
 
 }

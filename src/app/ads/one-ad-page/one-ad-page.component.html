@@ -1,13 +1,16 @@
-<div id="one-page-ad" *ngIf="singleAd">
-    <h1 id="hidden-h1">Rental Application</h1>
+<div id="one-page-ad" *ngIf="singleAd && userDetails">
+    <div class="return-section">
+        <h1>Rental Application</h1>
+        <h3>Changed your mind? <a routerLink="/ads">check other offers !</a> Or go back to <a routerLink="">Home Page</a></h3>
+    </div>
     <div class="form-container">
         <h1>Landlord Information</h1>
         <h3>Name</h3>
-        <h4>{{ singleAd.phoneNumber }}</h4>
+        <h4>{{ userDetails.name }}</h4>
         <h3>Phone Number </h3>
         <h4>{{ singleAd.phoneNumber }}</h4>
         <h3>Email</h3>
-        <h4>{{ singleAd.phoneNumber }}</h4>
+        <h4>{{ userDetails.email }}</h4>
     </div>
     <div class="form-container">
         <h1>Rental Information</h1>
@@ -19,6 +22,7 @@
         <h4>{{ singleAd.roomNumber }}</h4>
         <h3>Description</h3>
         <h4>{{ singleAd.description }}</h4>
-        <button class="apply-btn" [routerLink]="['/apply']">Apply</button>
+        <img class="ad-img" src={{singleAd.picture}} alt="">
+        <button class="apply-btn" (click)="applyRedirection()">Apply</button>
     </div>
 </div>
