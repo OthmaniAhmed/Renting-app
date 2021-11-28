@@ -17,7 +17,7 @@ export class OneAdPageComponent implements OnInit {
   private _id! : string ;
   private routeSub!: Subscription;
 
-  private userId = "619ab530d4a23538393eaef7" ;
+  private userId = "" ;
 
   constructor(private adsService : AdsService, private route : ActivatedRoute,private userService : AuthService,private router :Router) { }
 

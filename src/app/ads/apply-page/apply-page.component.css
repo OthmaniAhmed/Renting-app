@@ -49,6 +49,17 @@ a{
     border-radius: 10px;
 }
 
+.form-container input[type=email]{
+    width: 80%;
+    margin: 30px 10%;
+    height: 30px;
+    background-color: #E8F1F8;
+    border: none;
+    padding: 10px;
+    font-size: large;
+    border-radius: 10px;
+}
+
 .form-container span{
     font-size: large;
 }

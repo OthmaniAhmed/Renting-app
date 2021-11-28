@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatButtonModule } from '@angular/material/button';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,7 +19,9 @@ import { AdsPageComponent } from './ads/ads-page/ads-page.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { ApplyPageComponent } from './ads/apply-page/apply-page.component';
 import { HttpClientModule } from '@angular/common/http';
-import { OneAdPageComponent } from './ads/one-ad-page/one-ad-page.component'
+import { OneAdPageComponent } from './ads/one-ad-page/one-ad-page.component';
+
+
 
 @NgModule({
   declarations: [
@@ -31,7 +36,7 @@ import { OneAdPageComponent } from './ads/one-ad-page/one-ad-page.component'
     SignupComponentComponent,
     AdsPageComponent,
     ApplyPageComponent,
-    OneAdPageComponent
+    OneAdPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,6 +44,8 @@ import { OneAdPageComponent } from './ads/one-ad-page/one-ad-page.component'
     NoopAnimationsModule,
     FormsModule,
     HttpClientModule,
+    MatMenuModule,
+    MatButtonModule, 
 
   ],
   providers: [],

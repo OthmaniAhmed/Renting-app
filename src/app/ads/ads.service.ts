@@ -9,6 +9,7 @@ import { Advertisement } from './Advertisement';
 export class AdsService {
 
   private url: string = "http://localhost:3000/api/ads/" ;
+  private applyUrl : string = "http://localhost:3000/api/apply/";
 
   constructor(private http: HttpClient) { }
 
@@ -19,6 +20,9 @@ export class AdsService {
   getAdById(id: any):Observable<Advertisement>{
     
     return this.http.get<Advertisement>(this.url+`${id}`);
+  }
 
+  ApplyRegister(apply : any){
+    return this.http.post<any>(this.applyUrl, apply)
   }
 }

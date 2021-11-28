@@ -20,7 +20,6 @@ export class NavBarComponent implements OnInit {
     }
 
   this.userName = localStorage.getItem('username') ;
-  console.log(this.userName+"88"+this.isAuthenticated)
   }
 
   scrollTo(tag : string){

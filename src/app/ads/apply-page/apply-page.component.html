@@ -1,62 +1,64 @@
 <section id="app-page">
     <h1>Rental Application</h1>
     <h3>Changed your mind? <a routerLink="/ads">check other offers !</a> Or go back to <a routerLink="">Home Page</a></h3>
-    <div class="form-container">
-        <span>Full name :</span> <input type="text" name="" id="">
-        <span>Phone Number :</span> <input type="text" name="" id="" required >
-        <span>Email :</span> <input type="text" name="" id="">
-        <span>Address :</span> <input type="text" name="" id="">
-        <!-- Gender -->
-        <span>Gender :</span>
-        <div class="radio-btn-container"> 
-            <div>
-                <input type="radio" id="male" name="gender" value="HTML">
-                <label>Male</label>
+    <form ngNativeValidate #form >
+        <div class="form-container">
+            <span>Full name :</span> <input [(ngModel)]="applyData.tenantName"  type="text" name="tenantName" id="" required >
+            <span>Phone Number :</span> <input [(ngModel)]="applyData.phoneNumber" type="text" name="phoneNumber" id="" required >
+            <span>Email :</span> <input [(ngModel)]="applyData.tenantEmail" type="email" name="tenantEmail" id="" required >
+            <span>Address :</span> <input [(ngModel)]="applyData.tenantAddress" type="text" name="tenantAddress" id="" required >
+            <!-- Gender -->
+            <span>Gender :</span>
+            <div class="radio-btn-container"> 
+                <div>
+                    <input  [(ngModel)]="applyData.tenantGender" type="radio" id="male" name="tenantGender" value="Male" required >
+                    <label>Male</label>
+                </div>
+                <div>
+                    <input [(ngModel)]="applyData.tenantGender" type="radio" id="female" name="tenantGender" value="Female" required >
+                    <label >Female</label>
+                </div>
             </div>
-            <div>
-                <input type="radio" id="female" name="gender" value="CSS">
-                <label >Female</label>
+            <!-- marital status -->
+            <span>Marital Status :</span>
+            <div class="radio-btn-container">
+                <div>
+                    <input [(ngModel)]="applyData.tenantMaritalStatus" type="radio" id="Single" name="tenantMaritalStatus" value="Single" required >
+                    <label>Single</label>
+                </div>
+                <div>
+                    <input [(ngModel)]="applyData.tenantMaritalStatus" type="radio" id="Married" name="tenantMaritalStatus" value="Married" required >
+                    <label >Married</label>
+                </div>
+                <div>
+                    <input [(ngModel)]="applyData.tenantMaritalStatus" type="radio" id="Retired" name="tenantMaritalStatus" value="Retired" required >
+                    <label >Other</label>
+                </div>
             </div>
+            <!-- occupation status -->
+            <span>Occupation Status :</span>
+            <div class="radio-btn-container">
+                <div>
+                    <input [(ngModel)]="applyData.tenantOccupationStatus" type="radio" id="Student" name="OccupationStatus" value="Student" required >
+                    <label>Student</label>
+                </div>
+                <div>
+                    <input [(ngModel)]="applyData.tenantOccupationStatus" type="radio" id="Employed" name="OccupationStatus" value="Employed" required >
+                    <label >Employed</label>
+                </div>
+                <div>
+                    <input [(ngModel)]="applyData.tenantOccupationStatus" type="radio" id="Retired" name="OccupationStatus" value="Retired" required >
+                    <label >Retired</label>
+                </div>
+                <div>
+                    <input [(ngModel)]="applyData.tenantOccupationStatus" type="radio" id="Unemployed" name="OccupationStatus" value="Unemployed">
+                    <label >Unemployed</label>
+                </div>
+            </div>
+            <span>Comment :</span><textarea [(ngModel)]="applyData.comment" name="comment" id="" cols="30" rows="10" required ></textarea>
+            <button class="submit-btn" (click)="form.checkValidity()?applyToTheAd() : null">Submit</button>
         </div>
-        <!-- marital status -->
-        <span>Marital Status :</span>
-        <div class="radio-btn-container">
-            <div>
-                <input type="radio" id="Student" name="occupation_status" value="HTML">
-                <label>Single</label>
-            </div>
-            <div>
-                <input type="radio" id="Employed" name="occupation_status" value="CSS">
-                <label >Married</label>
-            </div>
-            <div>
-                <input type="radio" id="Retired" name="occupation_status" value="CSS">
-                <label >Other</label>
-            </div>
-        </div>
-        <!-- occupation status -->
-        <span>Occupation Status :</span>
-        <div class="radio-btn-container">
-            <div>
-                <input type="radio" id="Student" name="occupation_status" value="HTML">
-                <label>Student</label>
-            </div>
-            <div>
-                <input type="radio" id="Employed" name="occupation_status" value="CSS">
-                <label >Employed</label>
-            </div>
-            <div>
-                <input type="radio" id="Retired" name="occupation_status" value="CSS">
-                <label >Retired</label>
-            </div>
-            <div>
-                <input type="radio" id="Unemployed" name="occupation_status" value="CSS">
-                <label >Unemployed</label>
-            </div>
-        </div>
-        <span>Comment :</span><textarea name="" id="" cols="30" rows="10"></textarea>
-        <button class="submit-btn">Submit</button>
-    </div>
+    </form>
 </section>
 
 

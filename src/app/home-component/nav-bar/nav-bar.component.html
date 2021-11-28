@@ -22,8 +22,24 @@
                     <li (click)="scrollTo('first-page')" >Home</li>
                     <li (click)="scrollTo('second-page')" >About Us</li>
                     <li (click)="scrollTo('fourth-page')" >Contact</li>
-                    <li routerLink="/login" (click)="logout()"> logout </li>
+                    <button class="account-btn" [matMenuTriggerFor]="menu">
+                        My Account  
+                        <!-- <i class="fas fa-ellipsis-v"></i>  -->
+                    
+                    </button>
+                      <mat-menu #menu="matMenu">
+                        <button mat-menu-item>
+                          <span>Redial</span>
+                        </button>
+                        <button mat-menu-item disabled>
+                          <span>Check voice mail</span>
+                        </button>
+                        <button mat-menu-item  routerLink="/login"  (click)="logout()">
+                          <span>logout </span>
+                        </button>
+                      </mat-menu>
                 </ul>
+                
             </div>
         </div>
     </div>
