@@ -20,6 +20,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { ApplyPageComponent } from './ads/apply-page/apply-page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { OneAdPageComponent } from './ads/one-ad-page/one-ad-page.component';
+import { AdCreateComponent } from './ads/ad-create/ad-create.component';
 
 
 
@@ -37,6 +38,7 @@ import { OneAdPageComponent } from './ads/one-ad-page/one-ad-page.component';
     AdsPageComponent,
     ApplyPageComponent,
     OneAdPageComponent,
+    AdCreateComponent,
   ],
   imports: [
     BrowserModule,

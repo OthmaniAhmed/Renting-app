@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdCreateComponent } from './ads/ad-create/ad-create.component';
 import { AdsPageComponent } from './ads/ads-page/ads-page.component';
 import { ApplyPageComponent } from './ads/apply-page/apply-page.component';
 import { OneAdPageComponent } from './ads/one-ad-page/one-ad-page.component';
@@ -14,7 +15,7 @@ const routes: Routes = [
   {path: 'ads', component: AdsPageComponent},
   {path: 'apply/:id', component: ApplyPageComponent},
   {path: 'offer/:id', component: OneAdPageComponent},  
-
+  {path: 'create', component: AdCreateComponent},  
 ];
 
 @NgModule({
