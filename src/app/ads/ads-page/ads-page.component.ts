@@ -14,8 +14,6 @@ export class AdsPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.adsService.getAds().subscribe(data => this.ads = data);
-
-
 }
 
 

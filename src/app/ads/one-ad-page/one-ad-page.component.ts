@@ -17,9 +17,7 @@ export class OneAdPageComponent implements OnInit {
   public userDetails? : any;
   private _id! : string ;
   private routeSub!: Subscription;
-
   private userId = "" ;
-   imagePath : any;
 
   constructor(private adsService : AdsService, private route : ActivatedRoute,private userService : AuthService,private router :Router,private _sanitizer: DomSanitizer) { }
 
@@ -31,10 +29,7 @@ export class OneAdPageComponent implements OnInit {
     this.adsService.getAdById(this._id).subscribe(
       data => {
         this.singleAd = data ;    
-         this.imagePath =this._sanitizer.bypassSecurityTrustResourceUrl('data:image/jpg;base64,' 
-         + data.picture.data);
-
-        
+        console.log(this.singleAd)
         this.userId = this.singleAd.creatorId ;
         this.userService.getUserById(this.userId).subscribe(
           data =>{
