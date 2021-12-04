@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
+import {MatSelectModule} from '@angular/material/select';
+
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -48,6 +50,7 @@ import { AdCreateComponent } from './ads/ad-create/ad-create.component';
     HttpClientModule,
     MatMenuModule,
     MatButtonModule, 
+    MatSelectModule,
 
   ],
   providers: [],

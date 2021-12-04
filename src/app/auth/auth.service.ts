@@ -30,6 +30,7 @@ export class AuthService {
         this.isAuthenticated = true ;
         localStorage.setItem('token',res.token);
         localStorage.setItem('username',res.userName);
+        localStorage.setItem('userId',res.userId);
         this.userName = res.userName ;
         this.router.navigate(['']);
       }

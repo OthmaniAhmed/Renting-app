@@ -22,7 +22,8 @@
         <h4>{{ singleAd.roomNumber }}</h4>
         <h3>Description</h3>
         <h4>{{ singleAd.description }}</h4>
-        <img class="ad-img" src={{singleAd.picture}} alt="">
+        <img class="ad-img"  [src]="imagePath" alt="">
         <button class="apply-btn" (click)="applyRedirection()">Apply</button>
     </div>
 </div>
+    

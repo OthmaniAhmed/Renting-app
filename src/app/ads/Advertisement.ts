@@ -6,7 +6,7 @@ export interface Advertisement{
     prixBy: string,
     roomNumber: string,
     tenantType: string,
-    picture: string,
+    picture: any,
     description: string,
     phoneNumber: string,
     email: string,

@@ -9,7 +9,7 @@
     </div>
     <h3 class="hidden-item">1</h3>
     <div class="one-ad-container" *ngFor="let ad of ads">
-        <img src={{ad.picture}} alt="">
+        <img [src]="'data:image/jpg;base64,'+ad.picture.data" alt="">
         <div class="info-container">
             <h2>{{ad.adress}}, {{ad.ville}}</h2>
             <h3>House for rent, {{ad.roomNumber}} bedrooms</h3>

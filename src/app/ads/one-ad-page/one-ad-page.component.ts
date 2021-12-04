@@ -3,7 +3,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { AuthService } from 'src/app/auth/auth.service';
 import { AdsService } from '../ads.service';
-import { Advertisement } from '../Advertisement';
+import { DomSanitizer } from '@angular/platform-browser';
+
 
 @Component({
   selector: 'app-one-ad-page',
@@ -18,8 +19,9 @@ export class OneAdPageComponent implements OnInit {
   private routeSub!: Subscription;
 
   private userId = "" ;
+   imagePath : any;
 
-  constructor(private adsService : AdsService, private route : ActivatedRoute,private userService : AuthService,private router :Router) { }
+  constructor(private adsService : AdsService, private route : ActivatedRoute,private userService : AuthService,private router :Router,private _sanitizer: DomSanitizer) { }
 
   ngOnInit(): void {
     this.routeSub = this.route.params.subscribe(params => {
@@ -28,15 +30,20 @@ export class OneAdPageComponent implements OnInit {
 
     this.adsService.getAdById(this._id).subscribe(
       data => {
-        this.singleAd = data ;
+        this.singleAd = data ;    
+         this.imagePath =this._sanitizer.bypassSecurityTrustResourceUrl('data:image/jpg;base64,' 
+         + data.picture.data);
+
+        
         this.userId = this.singleAd.creatorId ;
         this.userService.getUserById(this.userId).subscribe(
           data =>{
             this.userDetails = data ;
-          }
+     } 
         )
       }
     );
+
   }
 
   applyRedirection(){

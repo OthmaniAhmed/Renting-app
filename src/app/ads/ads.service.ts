@@ -25,4 +25,8 @@ export class AdsService {
   ApplyRegister(apply : any){
     return this.http.post<any>(this.applyUrl, apply)
   }
+
+  postRegister(formData : FormData){
+    return  this.http.post<any>(this.url, formData )
+  }
 }

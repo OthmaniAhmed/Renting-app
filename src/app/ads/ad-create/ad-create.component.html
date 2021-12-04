@@ -1,1 +1,61 @@
-<p>ad-create works!</p>
+<section id="ad-create-page">
+    <h1>hi</h1>
+    <div class="form-container">
+        <div class="input-container">
+            <span>Phone Number</span><input [(ngModel)]="post.phoneNumber"  type="number" name="phoneNumber" id=""><br>
+        </div>
+        <div class="input-container">
+            <span>Email</span><input [(ngModel)]="post.email"  type="email" name="email" id=""><br>
+        </div>
+        <div class="input-container">
+            <span>Room Numbers</span>
+            <input [(ngModel)]="post.roomNumber" type="number" name="roomNumber" id=""><br>
+        </div>
+        <div class="input-container">
+            <span>Price</span>
+            <input [(ngModel)]="post.prix" type="number" name="prix" id="prix">
+        </div>
+        <div class="input-container">
+            <span>Price by</span>
+            <mat-form-field appearance="fill">
+                <mat-label>Price by</mat-label>
+            <mat-select [(ngModel)]="post.prixBy"  name="prixBy">
+                <mat-option *ngFor="let date of priceBy" [value]="date" >
+                  {{date}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="input-container">
+            <span>Select your state</span>
+            <mat-form-field appearance="fill">
+                <mat-label>Select your state</mat-label>
+            <mat-select [(ngModel)]="post.ville" name="ville">
+                <mat-option *ngFor="let state of states" [value]="state" >
+                {{state}}
+                </mat-option>
+            </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="input-container">
+            <span>Tenant type</span>
+        <mat-form-field appearance="fill">
+            <mat-label>Tenant Type</mat-label>
+        <mat-select  [(ngModel)]="post.tenantType" name="tenantType">
+            <mat-option *ngFor="let tenant of tenantType" [value]="tenant">
+              {{tenant}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        </div>
+        <div class="input-container">
+            <span>Description</span><textarea name="description" id="" cols="30" rows="7" placeholder="Description" [(ngModel)]="post.description"></textarea>
+        </div>
+        <button  class="file-picker-btn" (click)="filePicker.click()" >Pick Image</button>
+        <input hidden #filePicker type="file" (change)="onFileSelected($event)">
+        <div class="image-preview" *ngIf="imagePreview !== '' && imagePreview">
+            <img [src]="imagePreview" alt="">
+        </div>
+        <button class="sabmit-btn" (click)="savePost()" >Save</button>
+    </div>
+</section>
