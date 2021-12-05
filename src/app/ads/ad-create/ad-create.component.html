@@ -1,11 +1,15 @@
+<app-navbar-ads></app-navbar-ads>
 <section id="ad-create-page">
-    <h1>hi</h1>
+    <h1  class="hidden-ele">hi</h1>
     <div class="form-container">
         <div class="input-container">
             <span>Phone Number</span><input [(ngModel)]="post.phoneNumber"  type="number" name="phoneNumber" id=""><br>
         </div>
         <div class="input-container">
             <span>Email</span><input [(ngModel)]="post.email"  type="email" name="email" id=""><br>
+        </div>
+        <div class="input-container">
+            <span>Adress</span><input [(ngModel)]="post.adress"  type="text" name="adress" id=""><br>
         </div>
         <div class="input-container">
             <span>Room Numbers</span>
@@ -58,4 +62,5 @@
         </div>
         <button class="sabmit-btn" (click)="savePost()" >Save</button>
     </div>
+    <h1 class="hidden-ele">hi</h1>
 </section>

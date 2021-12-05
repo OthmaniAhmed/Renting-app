@@ -19,6 +19,7 @@ export class AdCreateComponent implements OnInit {
     ville: "" ,
     prix: "" ,
     prixBy: "" ,
+    adress: "" ,
     roomNumber: "" ,
     tenantType: "" ,
     picture: null ,

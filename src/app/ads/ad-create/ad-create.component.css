@@ -2,17 +2,18 @@
     background-image: url("../../../assets/creatingAdBackground.svg");
     background-size: cover;
     background-repeat: no-repeat;
-    height: 1100px;
+    height:fit-content;
 }
 
 .form-container{
     padding-top: 20px;
     margin-top: 20px;
     background-color: #FFFF;
-    height: 1000px ;
+    height: fit-content;
     width: 40%;
     margin-left: 10%;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-bottom: 50px;
 }
 
 .input-container{
@@ -52,6 +53,7 @@
     border-radius: 10px;
     padding: 10px 20px;
     border: 1px solid #726f6f;
+    cursor: pointer;
 }
 
 .image-preview{
@@ -65,12 +67,28 @@
 .sabmit-btn{
     display: block;
     margin-left: 45%;
-    padding: 10px 20px;
+    padding: 10px 30px;
     background-color: #ee5454;
-    border: 1px solid #ee5454;
+    border: 2px solid #ee5454;
     border-radius: 30px;
-    bottom: 10px;
     margin-top: 50px;
     color: #FFFF;
+    font-size: medium;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.sabmit-btn:hover{
+    background-color: #FFFF;
+    border: 2px solid #ee5454;
+    border-radius: 30px;
+    margin-top: 50px;
+    color: #ee5454;
+    font-size: medium;
+    cursor: pointer;
+    transition: 0.5s;
+    
 }
 
+.hidden-ele{
+    opacity: 0;
+}

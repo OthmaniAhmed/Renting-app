@@ -22,11 +22,17 @@ export class AdsService {
     return this.http.get<Advertisement>(this.url+`${id}`);
   }
 
+  postRegister(formData : FormData){
+    return  this.http.post<any>(this.url, formData )
+  }
+
   ApplyRegister(apply : any){
     return this.http.post<any>(this.applyUrl, apply)
   }
 
-  postRegister(formData : FormData){
-    return  this.http.post<any>(this.url, formData )
+  getReplys(id : string){
+    return this.http.get<any>(this.applyUrl+`${id}`)
   }
+
+
 }

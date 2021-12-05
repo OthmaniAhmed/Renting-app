@@ -29,7 +29,6 @@ export class OneAdPageComponent implements OnInit {
     this.adsService.getAdById(this._id).subscribe(
       data => {
         this.singleAd = data ;    
-        console.log(this.singleAd)
         this.userId = this.singleAd.creatorId ;
         this.userService.getUserById(this.userId).subscribe(
           data =>{
@@ -42,7 +41,7 @@ export class OneAdPageComponent implements OnInit {
   }
 
   applyRedirection(){
-    this.router.navigate(["apply",this._id])
+    this.router.navigate(["apply",this.userDetails.id])
   }
 
 

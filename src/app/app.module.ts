@@ -23,6 +23,8 @@ import { ApplyPageComponent } from './ads/apply-page/apply-page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { OneAdPageComponent } from './ads/one-ad-page/one-ad-page.component';
 import { AdCreateComponent } from './ads/ad-create/ad-create.component';
+import { ReplysComponent } from './ads/replys/replys.component';
+import { NavbarAdsComponent } from './ads/navbar-ads/navbar-ads.component';
 
 
 
@@ -41,6 +43,8 @@ import { AdCreateComponent } from './ads/ad-create/ad-create.component';
     ApplyPageComponent,
     OneAdPageComponent,
     AdCreateComponent,
+    ReplysComponent,
+    NavbarAdsComponent,
   ],
   imports: [
     BrowserModule,
