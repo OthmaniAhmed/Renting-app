@@ -12,6 +12,9 @@ export class NavbarAdsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    if(localStorage.getItem('token')){
+      this.isAuthenticated = true;
+    }
   }
 
 }

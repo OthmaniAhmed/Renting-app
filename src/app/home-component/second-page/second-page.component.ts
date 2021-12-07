@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import * as AOS from 'aos'
 
 @Component({
@@ -8,10 +9,24 @@ import * as AOS from 'aos'
 })
 export class SecondPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route : Router) { }
+
+  isAuthenticated = false;
 
   ngOnInit(): void {
     AOS.init();
+
+    if(localStorage.getItem('token')){
+      this.isAuthenticated = true;
+    }
   }
 
+  redirect(){
+    if(this.isAuthenticated){
+      this.route.navigate(['/create']) 
+    }
+    else{
+      this.route.navigate(['/login'])
+    }
+  }
 }

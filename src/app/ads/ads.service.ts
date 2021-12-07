@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
+import { tap } from 'rxjs/operators';
 import { Advertisement } from './Advertisement';
 
 @Injectable({
@@ -11,7 +12,13 @@ export class AdsService {
   private url: string = "http://localhost:3000/api/ads/" ;
   private applyUrl : string = "http://localhost:3000/api/apply/";
 
+  private refreshNeeded = new Subject<void>();
+
   constructor(private http: HttpClient) { }
+
+  get refreshneeded(){
+   return this.refreshNeeded ;
+  }
 
   getAds():Observable<Advertisement[]>{
     return this.http.get<Advertisement[]>(this.url);
@@ -34,5 +41,13 @@ export class AdsService {
     return this.http.get<any>(this.applyUrl+`${id}`)
   }
 
+  deleteReplyById(id : string){
+    return this.http.delete<any>(this.applyUrl +`${id}`)
+    .pipe(
+      tap(()=>{
+        this.refreshNeeded.next();  
+      })
+    )
+  }
 
 }

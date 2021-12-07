@@ -44,8 +44,19 @@
      margin-left: 10px;
     }
  
- .sticky-navbar{
-    position: fixed;
-    background-color: #F2F4F8;
-    
+
+.account-btn{
+    color: #FFFF;
+    background: transparent;
+    border: none;
+    font-size: 19px;
+    margin-left: 10px;
+    margin-top: 3px;
+    cursor: pointer;
+}
+
+
+.navbar-icon{
+    color: #365BA3;
+    margin-right: 5px;
 }

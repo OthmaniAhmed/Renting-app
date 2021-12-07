@@ -4,12 +4,43 @@
             <div class="logo-container"><img src="../../../assets/Logo.png" alt="" class="logo"></div>        
             <div class="link-container">
                 <ul>
-                    <li>Home</li>
-                    <li>About Us</li>
-                    <li>Contact</li>
+                    <li routerLink="/" >Home</li>
+                    <li routerLink="/">About Us</li>
+                    <li routerLink="/">Contact</li>
                     <li routerLink="/login">Login</li>
                 </ul>
             </div>
         </div>
     </div>
 </div>
+<div *ngIf="isAuthenticated">
+    <div class="nav-bar" >
+        <div class="container" >
+            <div class="logo-container"><img src="../../../assets/Logo.png" alt="" class="logo"></div>        
+            <div class="link-container">
+                <ul>
+                    <li routerLink="/">Home</li>
+                    <li routerLink="/">About Us</li>
+                    <li routerLink="/">Contact</li>
+                    <button class="account-btn" [matMenuTriggerFor]="menu">
+                        My Account  
+                        <!-- <i class="fas fa-ellipsis-v"></i>  -->
+                    
+                    </button>
+                      <mat-menu #menu="matMenu">
+                        <button mat-menu-item routerLink="/create">
+                            <i class="fas fa-address-card fa-lg navbar-icon"></i><span> Add Rental Advertisements</span>
+                        </button>
+                        <button mat-menu-item routerLink="/replys">
+                            <i class="fas fa-check-circle fa-lg navbar-icon"></i><span> Check For Reply</span>
+                        </button>
+                        <button mat-menu-item  routerLink="/login">
+                            <i class="fas fa-sign-out-alt fa-lg navbar-icon"></i><span> Logout </span>
+                        </button>
+                      </mat-menu>
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</div>  

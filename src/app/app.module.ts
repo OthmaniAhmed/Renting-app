@@ -4,7 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import {MatSelectModule} from '@angular/material/select';
-
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatIconModule} from '@angular/material/icon';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -55,6 +56,8 @@ import { NavbarAdsComponent } from './ads/navbar-ads/navbar-ads.component';
     MatMenuModule,
     MatButtonModule, 
     MatSelectModule,
+    MatExpansionModule,
+    MatIconModule,
 
   ],
   providers: [],

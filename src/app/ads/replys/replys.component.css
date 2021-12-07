@@ -1,0 +1,18 @@
+.container{
+    margin-left: 25%;
+    margin-top: 50px;
+}
+
+.reply-container{
+width: 50%;
+margin-bottom: 20px;
+}
+
+span{
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.delete-btn{
+    margin-left: 90%;
+}

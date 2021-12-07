@@ -30,7 +30,7 @@
 .input-container input{
     width: 30%;
     height: 20px;
-    background-color: #F8E8E8;
+    background-color: #E8F1F8;
     border: solid 1px rgb(180, 180, 180);
     border-radius: 10px;
     padding: 5px;  
@@ -38,7 +38,7 @@
 }
 
 .input-container textarea{
-    background-color: #F8E8E8;
+    background-color: #E8F1F8;
     border: solid 1px rgb(180, 180, 180);
     border-radius: 10px;
     padding: 5px;
@@ -68,8 +68,8 @@
     display: block;
     margin-left: 45%;
     padding: 10px 30px;
-    background-color: #ee5454;
-    border: 2px solid #ee5454;
+    background-color: #0f77c7;
+    border: 2px solid #0f77c7;
     border-radius: 30px;
     margin-top: 50px;
     color: #FFFF;
@@ -79,10 +79,10 @@
 }
 .sabmit-btn:hover{
     background-color: #FFFF;
-    border: 2px solid #ee5454;
+    border: 2px solid #0f77c7;
     border-radius: 30px;
     margin-top: 50px;
-    color: #ee5454;
+    color: #0f77c7;
     font-size: medium;
     cursor: pointer;
     transition: 0.5s;
