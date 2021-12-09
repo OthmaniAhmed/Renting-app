@@ -2,8 +2,33 @@
 <section id="ads-page" >
   <button class="return-btn" routerLink=""><i class="fas fa-arrow-left"></i> Return</button>
   <div class="filter-container">
-
+    <form class="filter-form">
+      <mat-form-field appearance="fill">
+        <mat-label>Select a state</mat-label>
+        <mat-select [(ngModel)]="stateselectedOption" name="stateselectedOption" >
+            <mat-option *ngFor="let state of states" [value]="state" >
+            {{state}}
+            </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Price by</mat-label>
+    <mat-select [(ngModel)]="prixByFilter"  name="prixByFilter">
+        <mat-option *ngFor="let date of prixByArray" [value]="date" >
+          {{date}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+      <input type="Number" [(ngModel)]="numberOfRoomFilter" name="numberOfRoomFilter" class="filter-form-input" placeholder="Room Number">
+      <button (click)="filterFun()" class="filter-btn">Filter <mat-icon>search</mat-icon></button>
+  </form>
   </div>
+  <mat-paginator *ngIf="ads.length != 0" [length]="filtredArray.length"
+              [pageSize]="3"
+              [pageSizeOptions]="[1,2,3]"
+              aria-label="Select page"
+              (page)="OnPageChange($event)">
+</mat-paginator>
   <div class="ads-container">
     <div *ngIf="ads.length == 0">
       <h1>No Ads yet ! Come Back Later</h1>
@@ -21,11 +46,6 @@
         <button class="see-more-brn" [routerLink]="['/offer', ad.id]">See more ...</button>
     </div>
   </div>
-  <mat-paginator [length]="ads.length"
-              [pageSize]="3"
-              [pageSizeOptions]="[1,2,3]"
-              aria-label="Select page"
-              (page)="OnPageChange($event)">
-</mat-paginator>
+  
   <h3 class="hidden-item">1</h3>
 </section>

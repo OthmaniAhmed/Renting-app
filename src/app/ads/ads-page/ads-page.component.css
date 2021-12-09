@@ -31,7 +31,7 @@
     height: 1200px;
     background-color:  #E8F1F8;
     margin: 0 auto;  
-    margin-top: 50px;
+    margin-top: 20px;
     border-radius: 20px;
     margin-bottom: 20px;
     padding-top: 20px;
@@ -121,6 +121,47 @@
 }
 
 mat-paginator{
-  margin-left: 25%;
-  width: 50%;
+  margin-left: 40%;
+  width: 20%;
+  margin-top: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.filter-container mat-form-field{
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+.filter-form{
+    display: flex;
+    justify-content:space-around;
+}
+
+.filter-form .filter-btn{
+    height: 50px;
+    width: 100px;
+    background-color: #365BA3;
+    border: none;
+    margin: 15px;
+    color: #FFFF;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 15px;
+    font-size: large;
+    border-radius: 30px;
+    cursor: pointer;
+    
+}
+
+
+
+.filter-form input[type=number]{
+    height: 50px;
+    margin: 15px;
+    background-color: #E8F1F8;
+    border:#a2b2bd solid 1px;
+    border-radius: 30px;
+    padding-left: 15px;
+    font-size: 15px;
+    width: 120px;
 }
