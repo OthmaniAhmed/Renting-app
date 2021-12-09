@@ -26,6 +26,7 @@ import { OneAdPageComponent } from './ads/one-ad-page/one-ad-page.component';
 import { AdCreateComponent } from './ads/ad-create/ad-create.component';
 import { ReplysComponent } from './ads/replys/replys.component';
 import { NavbarAdsComponent } from './ads/navbar-ads/navbar-ads.component';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 
 
@@ -46,6 +47,7 @@ import { NavbarAdsComponent } from './ads/navbar-ads/navbar-ads.component';
     AdCreateComponent,
     ReplysComponent,
     NavbarAdsComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -58,6 +60,7 @@ import { NavbarAdsComponent } from './ads/navbar-ads/navbar-ads.component';
     MatSelectModule,
     MatExpansionModule,
     MatIconModule,
+    MatPaginatorModule,
 
   ],
   providers: [],

@@ -119,3 +119,8 @@
     margin-left: 24%;
     margin-top: 10%;
 }
+
+mat-paginator{
+  margin-left: 25%;
+  width: 50%;
+}
