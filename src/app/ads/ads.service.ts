@@ -9,6 +9,10 @@ import { Advertisement } from './Advertisement';
 })
 export class AdsService {
 
+  userId = localStorage.getItem("userId");
+
+  numberOfReplys!: number ;
+
   private url: string = "http://localhost:3000/api/ads/" ;
   private applyUrl : string = "http://localhost:3000/api/apply/";
 
@@ -17,6 +21,7 @@ export class AdsService {
   constructor(private http: HttpClient) { }
 
   get refreshneeded(){
+    this.setNumberOfRplys()
    return this.refreshNeeded ;
   }
 
@@ -48,6 +53,18 @@ export class AdsService {
         this.refreshNeeded.next();  
       })
     )
+  }
+
+  setNumberOfRplys(){
+    if(this.userId){
+      this.getReplys(this.userId).subscribe(data => {
+        this.numberOfReplys = data.length
+      })
+   }  
+  }
+  
+  getNumberOfRplys(){
+    return this.numberOfReplys;
   }
 
 }

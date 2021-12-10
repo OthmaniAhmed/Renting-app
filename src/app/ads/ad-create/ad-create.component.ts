@@ -51,10 +51,8 @@ export class AdCreateComponent implements OnInit {
     this.post.creatorId = this.userId;
     formData.append('post',JSON.stringify(this.post));
     formData.append('image',this.selectedFile) 
-   
-    this.adService.postRegister(formData).subscribe(
     
-    )
+    this.adService.postRegister(formData).subscribe()
   }
 
 }

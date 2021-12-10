@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AdsService } from '../ads.service';
 
 @Component({
   selector: 'app-navbar-ads',
@@ -8,13 +9,18 @@ import { Component, OnInit } from '@angular/core';
 export class NavbarAdsComponent implements OnInit {
 
   isAuthenticated = false;
+  replysNumber = 0 ;
 
-  constructor() { }
+
+  constructor(private adsService : AdsService) { }
 
   ngOnInit(): void {
     if(localStorage.getItem('token')){
       this.isAuthenticated = true;
     }
+    this.adsService.setNumberOfRplys()
+
+    this.replysNumber = this.adsService.getNumberOfRplys();
   }
 
 }

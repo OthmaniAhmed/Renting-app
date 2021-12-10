@@ -1,4 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import { AdsService } from 'src/app/ads/ads.service';
 import { AuthService } from 'src/app/auth/auth.service';
 
 @Component({
@@ -12,7 +13,10 @@ export class NavBarComponent implements OnInit {
 
   isAuthenticated : boolean | undefined;
   userName : String | null | undefined ;
-  constructor(private authService : AuthService) { }
+  constructor(private authService : AuthService,private adsService : AdsService) { }
+  
+  replysNumber = 0 ;
+
 
   ngOnInit(): void {
     if(localStorage.getItem('token')){
@@ -20,6 +24,8 @@ export class NavBarComponent implements OnInit {
     }
 
   this.userName = localStorage.getItem('username') ;
+
+  this.replysNumber = this.adsService.getNumberOfRplys();
   }
 
   scrollTo(tag : string){
@@ -39,5 +45,7 @@ export class NavBarComponent implements OnInit {
   logout(){
     this.authService.logout();
   }
+
+
 
 }

@@ -6,6 +6,7 @@ import { MatButtonModule } from '@angular/material/button';
 import {MatSelectModule} from '@angular/material/select';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatIconModule} from '@angular/material/icon';
+import {MatBadgeModule} from '@angular/material/badge';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -27,6 +28,7 @@ import { AdCreateComponent } from './ads/ad-create/ad-create.component';
 import { ReplysComponent } from './ads/replys/replys.component';
 import { NavbarAdsComponent } from './ads/navbar-ads/navbar-ads.component';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -61,6 +63,9 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MatExpansionModule,
     MatIconModule,
     MatPaginatorModule,
+    MatBadgeModule,
+    BrowserAnimationsModule,
+    
 
   ],
   providers: [],
