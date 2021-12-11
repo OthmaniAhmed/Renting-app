@@ -67,4 +67,11 @@ export class AdsService {
     return this.numberOfReplys;
   }
 
+  addComment(formData : FormData){
+    return this.http.put<any>(this.url,formData).pipe(
+      tap(()=>{
+        this.refreshNeeded.next();  
+      })
+    )
+  }
 }

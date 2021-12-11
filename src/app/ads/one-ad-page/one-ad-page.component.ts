@@ -13,11 +13,22 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class OneAdPageComponent implements OnInit {
 
+  monthNames = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+  ];
+
   public singleAd?: any ;
   public userDetails? : any;
   private _id! : string ;
   private routeSub!: Subscription;
   private userId = "" ;
+
+  comment = {
+    commenterName :  "",
+    dateOfCreation : "",
+    theComment : "",
+  }
+
 
   constructor(private adsService : AdsService, private route : ActivatedRoute,private userService : AuthService,private router :Router,private _sanitizer: DomSanitizer) { }
 
@@ -26,6 +37,16 @@ export class OneAdPageComponent implements OnInit {
       this._id = params["id"] ;
     })
 
+    
+
+    this.adsService.refreshneeded.subscribe(()=>{
+      this.getAd();
+    })
+
+    this.getAd();
+  }
+
+  private getAd(){
     this.adsService.getAdById(this._id).subscribe(
       data => {
         this.singleAd = data ;    
@@ -37,7 +58,6 @@ export class OneAdPageComponent implements OnInit {
         )
       }
     );
-
   }
 
   applyRedirection(){
@@ -47,6 +67,24 @@ export class OneAdPageComponent implements OnInit {
 
   ngOnDestroy(){
     this.routeSub.unsubscribe();
+  }
+
+
+  addComment(){
+    var dateObj = new Date();
+    var month = dateObj.getUTCMonth() ; //months from 1-12
+    var day = dateObj.getUTCDate();
+    var year = dateObj.getUTCFullYear();
+    this.comment.dateOfCreation =  this.monthNames[month] + "" + day + "," + year  ;
+    const formData = new FormData;
+    formData.append('id', this._id)
+    formData.append('comment',JSON.stringify(this.comment));
+    this.adsService.addComment(formData).subscribe();
+    this.comment = {
+      commenterName :  "",
+      dateOfCreation : "",
+      theComment : "",
+    }
   }
 
 }

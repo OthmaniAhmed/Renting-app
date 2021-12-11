@@ -1,8 +1,9 @@
 #one-page-ad{
     background-image: url("../../../assets/ApplyBackground.svg");
     background-size: cover;
-    background-repeat: no-repeats;
-    height: 1300px;
+    background-repeat:no-repeat;
+    background-size: 2500px; 
+    background-color: #E8F1F8;   
 }
 
 .return-section h1{
@@ -70,5 +71,70 @@
     margin: 30px 30%;
     height: 350px;
     width: 350px;
+}
+
+.comment-section{
+    display: flex;
+    
+}
+
+.inputs-section{
+    width: 45%;
+    margin-left: 5%;
+    margin-top: 50px;
+}
+
+.inputs-section input{
+    width: 90%;
+    padding-left: 30px;
+    margin-bottom: 20px;
+    height: 35px;
+    border-radius: 30px;
+    border: rgb(129, 129, 129) 1px solid;
+}
+
+.inputs-section textarea{
+    width: 90%;
+    padding-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 30px;
+    border-radius: 30px;
+    border: rgb(129, 129, 129) 1px solid;
+    font-size: large;
+}
+
+.Add-comment-btn{
+    padding: 10px 20px;
+    background-color: rgb(122, 64, 177);
+    border: 1px solid rgb(122, 64, 177);
+    border-radius: 30px;
+    color: #FFFF;
+    width: 100px;
+    font-size: large;
+    cursor: pointer;
+}
+
+.all-comment-section{
+    width: 40%;
+    margin-left: 2%;
+    margin-top: 50px;
+    
+}
+
+.one-comment-section{
+    background-color: #FFFF;
+    padding: 20px;
+    margin-bottom: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5px;
+}
+
+.one-comment-section p{
+    margin-bottom: 10px;
+    color: rgb(119, 119, 119);
+}
+
+.one-comment-section h4{
+    color: rgb(78, 77, 77);
 }
 
