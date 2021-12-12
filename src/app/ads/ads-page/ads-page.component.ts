@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PageEvent } from '@angular/material/paginator';
+import { ActivatedRoute } from '@angular/router';
 import { AdsService } from '../ads.service';
 
 @Component({
@@ -19,39 +20,50 @@ export class AdsPageComponent implements OnInit {
   pageSlice = this.ads.slice(0 , 3)
 
   filtredArray! : any [] ;
-  stateselectedOption ='' ;
+  stateselectedOption  ='' ;
   prixByFilter = '' ;
   numberOfRoomFilter: number | null = null ;
 
-  constructor(private adsService : AdsService) { }
+  stateFromUrl : string | null = null;
+
+  constructor(private adsService : AdsService,private route : ActivatedRoute) { }
 
   ngOnInit(): void {
+
+    this.stateFromUrl = this.route.snapshot.paramMap.get('state');
+
     this.adsService.getAds().subscribe(data => {
       this.ads = data
       this.pageSlice = this.ads.slice(0 , 3)
       this.filtredArray = data;
+      if(this.stateFromUrl != null){
+        this.stateselectedOption = this.stateFromUrl ;
+        this.filterFun();
+       
+      }
     });
+
 }
+
 
 
 filterFun(){
   this.filtredArray = this.ads
-
+  
   if((this.stateselectedOption=='' || this.stateselectedOption == 'Any' ) && ( this.numberOfRoomFilter == null) && (this.prixByFilter =='All' || this.prixByFilter =='')){
     this.filtredArray = this.ads
   }else{
     if( this.numberOfRoomFilter !=null){
       this.filtredArray  = this.filtredArray.filter((ad: { roomNumber:  number; }) => ad.roomNumber == this.numberOfRoomFilter)
     }
-    if(this.stateselectedOption != '' && this.stateselectedOption!='any')
-    this.filtredArray  = this.filtredArray.filter((ad: { ville: string; }) => ad.ville == this.stateselectedOption)
+    if(this.stateselectedOption != '' && this.stateselectedOption!='any'){
+      this.filtredArray  = this.filtredArray.filter((ad: { ville: string; }) => ad.ville == this.stateselectedOption)
+    }
     if(this.prixByFilter !='All' && this.prixByFilter !=''){
       this.filtredArray  = this.filtredArray.filter((ad: { prixBy:  string; }) => ad.prixBy == this.prixByFilter )
-
     }
     
   }
-
 
   this.pageSlice = this.filtredArray.slice(0 , 3) ;
 }

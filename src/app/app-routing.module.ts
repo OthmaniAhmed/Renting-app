@@ -17,7 +17,8 @@ const routes: Routes = [
   {path: 'apply/:id', component: ApplyPageComponent},
   {path: 'offer/:id', component: OneAdPageComponent},  
   {path: 'create', component: AdCreateComponent},
-  {path: 'replys', component: ReplysComponent},  
+  {path: 'replys', component: ReplysComponent}, 
+  {path: 'ads/:state', component: AdsPageComponent},
 ];
 
 @NgModule({

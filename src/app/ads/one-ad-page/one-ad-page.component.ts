@@ -75,7 +75,7 @@ export class OneAdPageComponent implements OnInit {
     var month = dateObj.getUTCMonth() ; //months from 1-12
     var day = dateObj.getUTCDate();
     var year = dateObj.getUTCFullYear();
-    this.comment.dateOfCreation =  this.monthNames[month] + "" + day + "," + year  ;
+    this.comment.dateOfCreation =  this.monthNames[month] + " " + day + "," + year  ;
     const formData = new FormData;
     formData.append('id', this._id)
     formData.append('comment',JSON.stringify(this.comment));

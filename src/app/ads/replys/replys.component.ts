@@ -18,9 +18,15 @@ export class ReplysComponent implements OnInit {
   refreshData = new BehaviorSubject<boolean>(true);
   userId = localStorage.getItem("userId");
 
+  ads : any = [] ;
 
   ngOnInit(): void {
     
+    this.adsServise.getAds().subscribe(data => {
+      this.ads = data
+    })
+    
+
     this.adsServise.refreshneeded.subscribe(()=>{
       this.getAllReplys();
     });
@@ -38,8 +44,7 @@ export class ReplysComponent implements OnInit {
 
   deleteReply(id : string){
     this.adsServise.deleteReplyById(id).subscribe();
-    this.adsServise.setNumberOfRplys()
-
+    this.adsServise.setNumberOfRplys();
   }
 
 }

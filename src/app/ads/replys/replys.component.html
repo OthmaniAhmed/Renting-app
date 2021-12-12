@@ -1,33 +1,44 @@
 <app-navbar-ads></app-navbar-ads>
-
-<div class="container">
-    <div *ngFor="let reply of replys" class="reply-container">
-        <mat-accordion>
-            <mat-expansion-panel>
-                <mat-expansion-panel-header>
-                <mat-panel-title>
-                    {{reply.tenantName}}
-                </mat-panel-title>
-                <mat-panel-description>
-                    Phone Number : <span>{{reply.phoneNumber}}</span>
-                  </mat-panel-description>
-                </mat-expansion-panel-header>
-                <div class="userDesc">
-                    <p>Tenant Email : <span>{{reply.tenantEmail}}</span></p>
-                    <p>Tenant Address : <span>{{reply.tenantAddress}}</span></p>
-                    <p>Gender : <span>{{reply.tenantGender}}</span></p>
-                    <p>Marital Status : <span>{{reply.tenantMaritalStatus}}</span></p>
-                    <p>Occupation Status : <span>{{reply.tenantOccupationStatus}}</span></p>
-                    <p>Comment : <span>{{reply.comment}}</span></p>
+<mat-tab-group mat-align-tabs="center">
+    <mat-tab label="Manage Your Ads">
+        <div class="container">
+                <div *ngFor="let ad of ads">
+                    
                 </div>
-                <button class="delete-btn" mat-fab color="warn" aria-label="Example icon button with a home icon" (click)="deleteReply(reply.id)">
-                    <mat-icon>delete</mat-icon>
-                </button>
-             </mat-expansion-panel>
-        </mat-accordion>
-       
-
+        </div>
+    </mat-tab>
+    
+    <mat-tab label="Check For Replys">
+        <div class="container">
+        <div *ngFor="let reply of replys" class="reply-container">
+            <mat-accordion>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Tenant Name :   <h3>{{reply.tenantName}}</h3>
+                    </mat-panel-title>
+                    <mat-panel-description>
+                        Phone Number : <span>{{reply.phoneNumber}}</span>
+                      </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    <div class="userDesc">
+                        <p>Tenant Email : <span>{{reply.tenantEmail}}</span></p>
+                        <p>Tenant Address : <span>{{reply.tenantAddress}}</span></p>
+                        <p>Gender : <span>{{reply.tenantGender}}</span></p>
+                        <p>Marital Status : <span>{{reply.tenantMaritalStatus}}</span></p>
+                        <p>Occupation Status : <span>{{reply.tenantOccupationStatus}}</span></p>
+                        <p>Comment : <span>{{reply.comment}}</span></p>
+                    </div>
+                    <button class="delete-btn" mat-fab color="warn" aria-label="Example icon button with a home icon" (click)="deleteReply(reply.id)">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                 </mat-expansion-panel>
+            </mat-accordion>
+        </div>
     </div>
+    </mat-tab>
+  </mat-tab-group>
 
 
-</div>
+
+    

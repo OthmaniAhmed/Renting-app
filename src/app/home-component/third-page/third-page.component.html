@@ -1,8 +1,11 @@
 <section id="third-page">
     <h1 data-aos="zoom-in-down" data-aos-duration="1000">Renting a new place is the start of something great.</h1>
     <div class="screach-container">
-        <input type="text" class="screach-input" placeholder="Where do you wanna to live ?">
-        <button class="screach-btn">Search</button>
+        <input type="text" class="screach-input" placeholder="Where do you wanna to live ?" list="statelist" [(ngModel)]="stateName" name="stateName">
+        <datalist id="statelist">
+            <option  *ngFor="let state of states" [value]="state">{{state}}</option>
+        </datalist>
+        <button class="screach-btn" (click)="sreachBtn()">Search</button>
     </div>
     <img src="../../../assets/Trip-cuate.svg" alt="">
    
