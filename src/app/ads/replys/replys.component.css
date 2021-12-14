@@ -13,10 +13,63 @@ span{
     margin-left: 10px;
 }
 
-.delete-btn{
+.delete-reply-btn{
     margin-left: 90%;
 }
 
 h3{
     margin-left: 5px;
+}
+
+.container-ads{
+    margin-left: 25%;
+    margin-top: 50px;
+    width: 50%;
+    background-color: #E8F1F8; 
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content:space-between;
+}
+
+.container-ads img{
+    margin-left: 50px;
+    height: 200px;
+    width: 200px;
+    
+}
+
+.delete-btn{
+        height: 50px;
+        background-color: #E73131;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 30px;
+        margin: 10px;
+        font-size: large;
+        width: fit-content;
+        cursor: pointer;
+        margin-top: 15%;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        color: #FFFF;
+        
+}
+
+.container-ads .info-container{
+    width: 45%;
+}
+
+.container-ads .info-container h2{
+    color: #26bac9;
+    word-spacing: 5px;
+    font-size: 25px;
+    font-family: "Open Sans", sans-serif;
+    margin-bottom: 10px;
+}
+
+.container-ads .info-container h3{
+    font-weight: 500;
+    margin-bottom: 5px;
+    margin-bottom: 10px;
 }

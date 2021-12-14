@@ -22,17 +22,30 @@ export class ReplysComponent implements OnInit {
 
   ngOnInit(): void {
     
-    this.adsServise.getAds().subscribe(data => {
-      this.ads = data
+    this.adsServise.refreshneeded.subscribe(()=>{
+      this.getAllAd();
     })
-    
+      
 
     this.adsServise.refreshneeded.subscribe(()=>{
       this.getAllReplys();
     });
+
+
     
     this.getAllReplys();
+    this.getAllAd();
   }
+
+  private getAllAd(){
+    if(this.userId){
+    this.adsServise.getAdsByCreatorId(this.userId).subscribe(data => {
+      this.ads = data
+    })
+
+    }
+  }
+
   private getAllReplys(){
     if(this.userId){
       this.adsServise.getReplys(this.userId).subscribe(data => {
@@ -45,6 +58,10 @@ export class ReplysComponent implements OnInit {
   deleteReply(id : string){
     this.adsServise.deleteReplyById(id).subscribe();
     this.adsServise.setNumberOfRplys();
+  }
+
+  deleteAd(id : string){
+    this.adsServise.deleteAdById(id).subscribe();
   }
 
 }

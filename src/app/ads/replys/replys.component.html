@@ -1,13 +1,19 @@
 <app-navbar-ads></app-navbar-ads>
 <mat-tab-group mat-align-tabs="center">
-    <mat-tab label="Manage Your Ads">
-        <div class="container">
-                <div *ngFor="let ad of ads">
-                    
-                </div>
+    <!-- ads section -->
+    <mat-tab label="Manage Your Ads" >
+        <div class="container-ads" *ngFor="let ad of ads">
+                     <img src={{ad.picture}} alt="">
+        <div class="info-container">
+            <h2>{{ad.adress}}, {{ad.ville}}</h2>
+            <h3>{{ad.roomNumber}} bedrooms</h3>
+            <h4>{{ad.prix}}dt/ per {{ad.prixBy}}</h4>
+
+        </div>
+        <button class="delete-btn" (click)="deleteAd(ad.id)" >Delete</button>
         </div>
     </mat-tab>
-    
+    <!-- replys section -->
     <mat-tab label="Check For Replys">
         <div class="container">
         <div *ngFor="let reply of replys" class="reply-container">
@@ -29,7 +35,7 @@
                         <p>Occupation Status : <span>{{reply.tenantOccupationStatus}}</span></p>
                         <p>Comment : <span>{{reply.comment}}</span></p>
                     </div>
-                    <button class="delete-btn" mat-fab color="warn" aria-label="Example icon button with a home icon" (click)="deleteReply(reply.id)">
+                    <button class="delete-reply-btn" mat-fab color="warn" aria-label="Example icon button with a home icon" (click)="deleteReply(reply.id)">
                         <mat-icon>delete</mat-icon>
                     </button>
                  </mat-expansion-panel>

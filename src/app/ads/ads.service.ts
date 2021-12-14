@@ -74,4 +74,18 @@ export class AdsService {
       })
     )
   }
+
+  deleteAdById(id : string){
+    return this.http.delete<any>(this.url + `${id}`)
+    .pipe(
+      tap(()=>{
+        this.refreshNeeded.next();  
+      })
+    )
+}
+
+getAdsByCreatorId(id : string){
+  return this.http.get<any>(this.url+"adbycreatorid/" + `${id}`);
+}
+
 }
