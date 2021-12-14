@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 import { AuthService } from '../auth.service';
 
 @Component({
@@ -11,12 +12,13 @@ export class LoginComponentComponent implements OnInit {
   loginUserData = {email : '', password: ""}
 
 
-  constructor(private _auth:AuthService,) { }
+  constructor(private _auth:AuthService,private toastr: ToastrService) { }
 
   ngOnInit(): void {
   }
 
   loginUser(){
+    this.toastr.info('', 'Your Log-it in!');
     this._auth.loginUser(this.loginUserData)
   }
 

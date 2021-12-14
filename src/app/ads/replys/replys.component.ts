@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { AdsService } from '../ads.service';
+import { ToastrService } from 'ngx-toastr';
 
 
 @Component({
@@ -10,7 +11,7 @@ import { AdsService } from '../ads.service';
 })
 export class ReplysComponent implements OnInit {
 
-  constructor(private adsServise : AdsService) { }
+  constructor(private adsServise : AdsService,private toastr: ToastrService) { }
 
   
 
@@ -56,11 +57,13 @@ export class ReplysComponent implements OnInit {
   }
 
   deleteReply(id : string){
+    this.toastr.error('', 'This reply is deleted !');
     this.adsServise.deleteReplyById(id).subscribe();
     this.adsServise.setNumberOfRplys();
   }
 
   deleteAd(id : string){
+    this.toastr.error('', 'This Ad is deleted !');
     this.adsServise.deleteAdById(id).subscribe();
   }
 

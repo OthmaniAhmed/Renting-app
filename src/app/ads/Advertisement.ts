@@ -11,4 +11,5 @@ export interface Advertisement{
     phoneNumber: string,
     email: string,
     creatorId: number,
+    aProved : boolean,
 }

@@ -31,6 +31,7 @@ import { ReplysComponent } from './ads/replys/replys.component';
 import { NavbarAdsComponent } from './ads/navbar-ads/navbar-ads.component';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 
 
@@ -69,6 +70,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserAnimationsModule,
     MatTabsModule,
     MatAutocompleteModule,
+    ToastrModule.forRoot({
+      timeOut : 2000,
+      positionClass:'toast-bottom-right',  
+      preventDuplicates : true
+    }),
 
     
 

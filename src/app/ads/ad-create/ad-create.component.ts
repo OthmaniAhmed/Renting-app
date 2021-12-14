@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 import { AdsService } from '../ads.service';
 
 @Component({
@@ -31,7 +32,7 @@ export class AdCreateComponent implements OnInit {
 
   userId : any ;
 
-  constructor(private adService : AdsService) { }
+  constructor(private adService : AdsService,private toastr: ToastrService) { }
 
   ngOnInit(): void {
     this.userId = localStorage.getItem("userId") ;
@@ -51,8 +52,8 @@ export class AdCreateComponent implements OnInit {
     this.post.creatorId = this.userId;
     formData.append('post',JSON.stringify(this.post));
     formData.append('image',this.selectedFile) 
-    
     this.adService.postRegister(formData).subscribe()
+    this.toastr.success('wait for admin to prove it', 'Your Ad is Saved !');
   }
 
 }

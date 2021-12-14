@@ -34,7 +34,8 @@
       <h1>No Ads yet ! Come Back Later</h1>
     </div>
     <h3 class="hidden-item">1</h3>
-    <div class="one-ad-container" *ngFor="let ad of pageSlice">
+    <div  *ngFor="let ad of pageSlice">
+      <div class="one-ad-container" *ngIf="ad.aProved">
         <img src={{ad.picture}} alt="">
         <div class="info-container">
             <h2>{{ad.adress}}, {{ad.ville}}</h2>
@@ -44,6 +45,7 @@
 
         </div>
         <button class="see-more-brn" [routerLink]="['/offer', ad.id]">See more ...</button>
+      </div> 
     </div>
   </div>
   
